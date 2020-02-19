@@ -1,0 +1,2 @@
+android.app.Application
+Jora_client.Jora_client

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{89e212a9-809f-4246-a8c0-b8b0f4454741}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>Jora_gateway</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{D51BCBC9-82E9-4017-911E-C93873C4EA2B}</LinuxProjectType>
+    <ProjectName>Jora_gateway</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <IncludePath>c:\Users\jtroeth\AppData\Local\Microsoft\Linux\Header Cache\1.0\535482450\usr\include\boost;C:\Users\jtroeth\Documents\IoT\Jora;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\jtroeth\Documents\IoT\Jora;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <LibraryPath>
+    </LibraryPath>
+    <IncludePath>
+    </IncludePath>
+    <SourcePath>
+    </SourcePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\DHT.cpp">
+      <RemoteCopyFile Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</RemoteCopyFile>
+      <RemoteCopyToOutputDir Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</RemoteCopyToOutputDir>
+    </ClCompile>
+    <ClCompile Include="..\..\DHTData.cpp">
+      <DeploymentContent>true</DeploymentContent>
+    </ClCompile>
+    <ClCompile Include="..\..\FileRW.cpp" />
+    <ClCompile Include="..\..\Jora.cpp" />
+    <ClCompile Include="..\..\LED.cpp" />
+    <ClCompile Include="..\..\Data.cpp" />
+    <ClCompile Include="..\..\Logging.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</DeploymentContent>
+    </ClCompile>
+    <ClCompile Include="..\..\Node.cpp" />
+    <ClCompile Include="..\..\Payload.cpp" />
+    <ClCompile Include="..\..\sql.cpp" />
+    <ClCompile Include="..\..\Utilities.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\bcm2835.h">
+      <RemoteCopyFile Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</RemoteCopyFile>
+      <RemoteCopyToOutputDir Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</RemoteCopyToOutputDir>
+    </ClInclude>
+    <ClInclude Include="..\..\Definitions.h" />
+    <ClInclude Include="..\..\DHT.h" />
+    <ClInclude Include="..\..\DHTData.h" />
+    <ClInclude Include="..\..\FileRW.h" />
+    <ClInclude Include="..\..\Jora.h" />
+    <ClInclude Include="..\..\LED.h" />
+    <ClInclude Include="..\..\Data.h" />
+    <ClInclude Include="..\..\Logging.h" />
+    <ClInclude Include="..\..\Node.h" />
+    <ClInclude Include="..\..\Payload.h" />
+    <ClInclude Include="..\..\sql.h" />
+    <ClInclude Include="..\..\Utilities.h" />
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <Link>
+      <LibraryDependencies>wiringPi; bcm2835; sqlite3; boost_system; boost_filesystem</LibraryDependencies>
+      <AdditionalLibraryDirectories>C:\Users\jtroeth\Documents\IoT\Jora;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DebuggerSymbolInformation>true</DebuggerSymbolInformation>
+    </Link>
+    <ClCompile>
+      <AdditionalOptions>
+      </AdditionalOptions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <TextView
+        android:text="Gateway IP:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gatewayIpText"
+        android:layout_marginRight="0.0dp" />
+    <EditText
+        android:text="10.1.1.14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gatewayIp"
+        android:layout_marginLeft="0.0dp" />
+    <Button
+        android:text="Connect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/connectButton" />
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:gravity="bottom"
+        android:id="@+id/connectionStatus" />
+    <TextView
+        android:text="Node Address:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nodeAddressText"
+        android:layout_marginRight="0.0dp" />
+    <EditText
+        android:text="0.200.0.1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nodeAddress"
+        android:layout_marginLeft="0.0dp" />
+    <Button
+        android:text="LED OFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ledButton" />
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ledStatus" />
+</LinearLayout>

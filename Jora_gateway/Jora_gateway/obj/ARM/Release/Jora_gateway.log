@@ -1,0 +1,122 @@
+﻿  Validating sources
+  Copying sources remotely to '10.1.1.14'
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  DHT.cpp
+  DHTData.cpp
+  FileRW.cpp
+  Jora.cpp
+C:\Users\jtroeth\Documents\IOT\Jora\Jora.cpp(189,57): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘size_t {aka unsigned int}’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Jora.cpp(189,57): warning :    writeRegister(REG_PAYLOAD_LENGTH, currentLength + size);
+C:\Users\jtroeth\Documents\IOT\Jora\Jora.cpp(189,57): warning :                                                          ^
+C:\Users\jtroeth\Documents\IOT\Jora\Jora.cpp(290,27): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Jora.cpp(290,27): warning :     _onReceive(packetLength);
+C:\Users\jtroeth\Documents\IOT\Jora\Jora.cpp(290,27): warning :                            ^
+C:\Users\jtroeth\Documents\IOT\Jora\Jora.cpp(504,56): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Jora.cpp(504,56): warning :      writeRegister(REG_PA_CONFIG, PA_BOOST | (level - 2));
+C:\Users\jtroeth\Documents\IOT\Jora\Jora.cpp(504,56): warning :                                                         ^
+C:\Users\jtroeth\Documents\IOT\Jora\Jora.h(84,35): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Jora.h(84,35): warning :  #define bitClear(val, bit) ((val) &= ~((1UL) << (bit)))
+C:\Users\jtroeth\Documents\IOT\Jora\Jora.h(84,35): warning :                                    ^
+C:\Users\jtroeth\Documents\IOT\Jora\Jora.cpp(569,2): message : in expansion of macro ‘bitClear’
+C:\Users\jtroeth\Documents\IOT\Jora\Jora.cpp(569,2): message :   bitClear(addr, 7);
+C:\Users\jtroeth\Documents\IOT\Jora\Jora.cpp(569,2): message :   ^
+  LED.cpp
+C:\Users\jtroeth\Documents\IOT\Jora\LED.cpp(4,31): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\LED.cpp(8,47): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\LED.cpp(37,30): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\LED.cpp(37,30): warning :   uint8_t brightness = (b - 48);
+C:\Users\jtroeth\Documents\IOT\Jora\LED.cpp(37,30): warning :                               ^
+C:\Users\jtroeth\Documents\IOT\Jora\LED.cpp(42,14): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\LED.cpp(42,14): warning :    brightness = brightness * 255; //can control brightness but easier just to send 1 for on
+C:\Users\jtroeth\Documents\IOT\Jora\LED.cpp(42,14): warning :               ^
+  Data.cpp
+  Logging.cpp
+  Node.cpp
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(29,20): warning : conversion to ‘uint16_t {aka short unsigned int}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(106,25): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘uint16_t {aka short unsigned int}’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(106,25): warning :       sql.gpsCurrentNode = nc;
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(106,25): warning :                          ^
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(107,26): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘uint16_t {aka short unsigned int}’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(107,26): warning :       sql.tempCurrentNode = nc;
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(107,26): warning :                           ^
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(120,9): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(120,9): warning :     node = sql.tempCurrentNode - 1; //index from 1 but use first array val
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(120,9): warning :          ^
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(124,9): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(124,9): warning :     node = sql.gpsCurrentNode - 1;
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(124,9): warning :          ^
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(135,14): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(135,14): warning :     p.dest[0] = sql.sd[node].project_id;
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(135,14): warning :               ^
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(136,14): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(136,14): warning :     p.dest[1] = sql.sd[node].class_id;
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(136,14): warning :               ^
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(137,68): warning : conversion to ‘uint16_t {aka short unsigned int}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(362,22): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(362,22): warning :      p.message[i + 1] = arr[i];
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(362,22): warning :                       ^
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(365,21): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(365,21): warning :      data.buf[i + 2] = arr[i]; //store in buf to be used after ACK
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(365,21): warning :                      ^
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(437,21): warning : conversion to ‘uint16_t {aka short unsigned int}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(437,21): warning :    data.activeSlaves |= (1 << sql.sdTrigVals.node_id); //need to add a func to check if slaves are still active. activeSlaves = 0;
+C:\Users\jtroeth\Documents\IOT\Jora\Node.cpp(437,21): warning :                      ^
+  Payload.cpp
+C:\Users\jtroeth\Documents\IOT\Jora\Payload.cpp(51,46): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Payload.cpp(52,52): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Payload.cpp(73,8): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Payload.cpp(73,8): warning :    temp *= 10;
+C:\Users\jtroeth\Documents\IOT\Jora\Payload.cpp(73,8): warning :         ^
+C:\Users\jtroeth\Documents\IOT\Jora\Payload.cpp(74,8): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Payload.cpp(148,8): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Payload.cpp(148,8): warning :   index *= 3;
+C:\Users\jtroeth\Documents\IOT\Jora\Payload.cpp(148,8): warning :         ^
+C:\Users\jtroeth\Documents\IOT\Jora\Payload.cpp(277,87): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Payload.cpp(290,27): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Payload.cpp(290,27): warning :    ConcatPayload(dest[i], i); //add destination
+C:\Users\jtroeth\Documents\IOT\Jora\Payload.cpp(290,27): warning :                            ^
+C:\Users\jtroeth\Documents\IOT\Jora\Payload.cpp(291,30): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Payload.cpp(291,30): warning :    ConcatPayload(_id[i], i + 4); //add sender (id)
+C:\Users\jtroeth\Documents\IOT\Jora\Payload.cpp(291,30): warning :                               ^
+C:\Users\jtroeth\Documents\IOT\Jora\Payload.cpp(294,51): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Payload.cpp(299,51): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+  sql.cpp
+C:\Users\jtroeth\Documents\IOT\Jora\Sql.cpp(416,27): warning : backslash and newline separated by space
+C:\Users\jtroeth\Documents\IOT\Jora\Sql.cpp(416,27): warning :    "GPS_LON         REAL," \
+C:\Users\jtroeth\Documents\IOT\Jora\Sql.cpp(416,27): warning :                            ^
+C:\Users\jtroeth\Documents\IOT\Jora\Sql.cpp(418,3): warning : ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+C:\Users\jtroeth\Documents\IOT\Jora\Sql.cpp(418,3): warning :    "LAST_UPDATE_TIME  INT  NOT NULL); ";
+C:\Users\jtroeth\Documents\IOT\Jora\Sql.cpp(418,3): warning :    ^
+C:\Users\jtroeth\Documents\IOT\Jora\Sql.cpp(430,3): warning : ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+C:\Users\jtroeth\Documents\IOT\Jora\Sql.cpp(430,3): warning :    "LAST_DOWNLINK_UPDATE_TIME  INT        NOT NULL); ";
+C:\Users\jtroeth\Documents\IOT\Jora\Sql.cpp(430,3): warning :    ^
+  Utilities.cpp
+C:\Users\jtroeth\Documents\IOT\Jora\Utilities.cpp(22,8): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Utilities.cpp(22,8): warning :   index *= MESSAGE_CHAR_SIZE;
+C:\Users\jtroeth\Documents\IOT\Jora\Utilities.cpp(22,8): warning :         ^
+C:\Users\jtroeth\Documents\IOT\Jora\Utilities.cpp(24,8): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Utilities.cpp(24,8): warning :    byte *= 10;
+C:\Users\jtroeth\Documents\IOT\Jora\Utilities.cpp(24,8): warning :         ^
+C:\Users\jtroeth\Documents\IOT\Jora\Utilities.cpp(25,8): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Utilities.cpp(25,8): warning :    byte += arr[i + index];
+C:\Users\jtroeth\Documents\IOT\Jora\Utilities.cpp(25,8): warning :         ^
+C:\Users\jtroeth\Documents\IOT\Jora\Utilities.cpp(36,24): warning : conversion to ‘uint16_t {aka short unsigned int}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Utilities.cpp(36,24): warning :   return (byte0 << 8) | byte1;
+C:\Users\jtroeth\Documents\IOT\Jora\Utilities.cpp(36,24): warning :                         ^
+C:\Users\jtroeth\Documents\IOT\Jora\Utilities.cpp(43,9): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Utilities.cpp(43,9): warning :   *(ret) = ((integer >> 8) & 0xff);
+C:\Users\jtroeth\Documents\IOT\Jora\Utilities.cpp(43,9): warning :          ^
+C:\Users\jtroeth\Documents\IOT\Jora\Utilities.cpp(44,13): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Utilities.cpp(44,13): warning :   *(ret + 1) = (integer & 0xff);
+C:\Users\jtroeth\Documents\IOT\Jora\Utilities.cpp(44,13): warning :              ^
+C:\Users\jtroeth\Documents\IOT\Jora\Utilities.cpp(82,6): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Utilities.cpp(82,6): warning :     n *= 10;
+C:\Users\jtroeth\Documents\IOT\Jora\Utilities.cpp(82,6): warning :       ^
+C:\Users\jtroeth\Documents\IOT\Jora\Utilities.cpp(83,6): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+  main.cpp
+C:\Users\jtroeth\Documents\IOT\Jora\Jora_gateway\Jora_gateway\main.cpp(6,17): error : sql.h: No such file or directory
+C:\Users\jtroeth\Documents\IOT\Jora\Jora_gateway\Jora_gateway\main.cpp(6,17): error :  #include "sql.h"
+C:\Users\jtroeth\Documents\IOT\Jora\Jora_gateway\Jora_gateway\main.cpp(6,17): error :                  ^
+C:\Users\jtroeth\Documents\IOT\Jora\Jora_gateway\Jora_gateway\main.cpp(6,17): error : compilation terminated.

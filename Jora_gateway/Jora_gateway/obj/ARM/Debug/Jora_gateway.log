@@ -1,0 +1,36 @@
+﻿  Validating sources
+  Copying sources remotely to '10.1.1.14'
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  main.cpp
+C:\Users\jtroeth\Documents\IOT\Jora\bcm2835.h(548): warning : "HIGH" redefined
+C:\Users\jtroeth\Documents\IOT\Jora\bcm2835.h(548): warning :  #define HIGH 0x1
+C:\Users\jtroeth\Documents\IOT\Jora\bcm2835.h(548): warning :  ^
+/usr/include/wiringPi.h(57): message : this is the location of the previous definition
+/usr/include/wiringPi.h(57): message :  #define HIGH    1
+/usr/include/wiringPi.h(57): message :  ^
+C:\Users\jtroeth\Documents\IOT\Jora\bcm2835.h(550): warning : "LOW" redefined
+C:\Users\jtroeth\Documents\IOT\Jora\bcm2835.h(550): warning :  #define LOW  0x0
+C:\Users\jtroeth\Documents\IOT\Jora\bcm2835.h(550): warning :  ^
+/usr/include/wiringPi.h(56): message : this is the location of the previous definition
+/usr/include/wiringPi.h(56): message :  #define LOW    0
+/usr/include/wiringPi.h(56): message :  ^
+C:\Users\jtroeth\Documents\IOT\Jora\Jora_gateway\Jora_gateway\main.cpp(52,24): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Jora_gateway\Jora_gateway\main.cpp(52,24): warning :    node.p.newMessage[i] = Jora.read(); //store temporarily until message is validated, then set to paylaod
+C:\Users\jtroeth\Documents\IOT\Jora\Jora_gateway\Jora_gateway\main.cpp(52,24): warning :                         ^
+C:\Users\jtroeth\Documents\IOT\Jora\Jora_gateway\Jora_gateway\main.cpp(143,29): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Jora_gateway\Jora_gateway\main.cpp(143,29): warning :   node.data.slave_node_total = node.sql.setupNodes();
+C:\Users\jtroeth\Documents\IOT\Jora\Jora_gateway\Jora_gateway\main.cpp(143,29): warning :                              ^
+C:\Users\jtroeth\Documents\IOT\Jora\Jora_gateway\Jora_gateway\main.cpp(385,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\jtroeth\Documents\IOT\Jora\Jora_gateway\Jora_gateway\main.cpp(385,20): warning :   for (int i = 0; i < m.length(); i++)
+C:\Users\jtroeth\Documents\IOT\Jora\Jora_gateway\Jora_gateway\main.cpp(385,20): warning :                     ^
+C:\Users\jtroeth\Documents\IOT\Jora\Jora_gateway\Jora_gateway\main.cpp(404,22): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\Users\jtroeth\Documents\IOT\Jora\Jora_gateway\Jora_gateway\main.cpp(404,22): warning :     for (int i = 0; i < m.length(); i++) {
+C:\Users\jtroeth\Documents\IOT\Jora\Jora_gateway\Jora_gateway\main.cpp(404,22): warning :                       ^
+C:\Users\jtroeth\Documents\IOT\Jora\Jora_gateway\Jora_gateway\main.cpp(429,9): warning : conversion to ‘int’ from ‘long long int’ may alter its value [-Wconversion]
+C:\Users\jtroeth\Documents\IOT\Jora\Jora_gateway\Jora_gateway\main.cpp(429,9): warning :   arr[0] = loopDuration;
+C:\Users\jtroeth\Documents\IOT\Jora\Jora_gateway\Jora_gateway\main.cpp(429,9): warning :          ^
+C:\Users\jtroeth\Documents\IOT\Jora\Jora_gateway\Jora_gateway\main.cpp(389,7): warning : variable ‘tStartSend’ set but not used [-Wunused-but-set-variable]
+  Linking objects
+  Jora_gateway.vcxproj -> C:\Users\jtroeth\Documents\IOT\Jora\Jora_gateway\Jora_gateway\bin\ARM\Debug\Jora_gateway.out
